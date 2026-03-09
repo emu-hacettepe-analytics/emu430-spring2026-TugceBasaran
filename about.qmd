@@ -5,13 +5,13 @@ sidebar: false
 
 # Education
 
--   B.S., Industrial Engineering, Hacettepe University, Turkey, 20xx - ongoing.
+-   B.S., Industrial Engineering, Hacettepe University, Turkey, 2021 - ongoing.
 
 # Work Experience
 
 ## Employements
 
-1.  Firm xxx, position xx, year xxx
+1.  Firm ROKETSAN, position Candidate Engineer, year 2025
 
 2.  Firm yyy, position yyy, year yyy
 

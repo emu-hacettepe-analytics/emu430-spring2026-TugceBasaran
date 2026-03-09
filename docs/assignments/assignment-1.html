@@ -399,47 +399,19 @@ ul.task-list li input[type="checkbox"] {
 <p>C) Production planning</p>
 <p>D) Interpretation of historical events</p>
 <p><strong><em>Correct answer: D) Interpretation of historical events</em></strong></p>
-<p><br>
-install.packages(“dslabs”)</p>
-<p>library(dslabs)<br>
-data(“polls_us_election_2016”)<br>
-<br>
-my_first &lt;- “Tugce”<br>
-my_birth_year &lt;- 2003<br>
-</p>
-<p>k &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8<br>
-<br>
-if (k %% 2 == 0) {<br>
-head(polls_us_election_2016, k)<br>
-} else {<br>
-tail(polls_us_election_2016, k)<br>
-}<br>
-<br>
-total_na &lt;- sum(is.na(polls_us_election_2016))<br>
-total_na<br>
-<br>
-na_per_column &lt;- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)<br>
-head(na_per_column, 8)<br>
-<br>
-new_data &lt;- polls_us_election_2016<br>
-<br>
-for (col in names(new_data)) {<br>
-if (is.numeric(new_data[[col]])) {<br>
-new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k<br>
-} else if (is.character(new_data[[col]]) || is.factor(new_data[[col]])) {<br>
-new_data[[col]] &lt;- as.character(new_data[[col]])<br>
-new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, “_”, k)<br>
-}<br>
-}<br>
-<br>
-if (k %% 2 == 0) {<br>
-head(new_data, k)<br>
-} else {<br>
-tail(new_data, k)<br>
-}<br>
-<br>
-sum(is.na(new_data))<br>
-anyNA(new_data)</p>
+<p>install.packages(“dslabs”)</p>
+<p>library(dslabs) data(“polls_us_election_2016”) my_first &lt;- “Tugce” my_birth_year &lt;- 2003</p>
+<p>k &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8 if (k %% 2 == 0) {<br>
+head(polls_us_election_2016, k) } else {<br>
+tail(polls_us_election_2016, k) }</p>
+<p>total_na &lt;- sum(is.na(polls_us_election_2016)) total_na</p>
+<p>na_per_column &lt;- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE) head(na_per_column, 8)</p>
+<p>new_data &lt;- polls_us_election_2016</p>
+<p>for (col in names(new_data)) { if (is.numeric(new_data[[col]])) { new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k } else if (is.character(new_data[[col]]) || is.factor(new_data[[col]])) { new_data[[col]] &lt;- as.character(new_data[[col]]) new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, “_“, k)<br>
+} }</p>
+<p>if (k %% 2 == 0) { head(new_data, k) } else {<br>
+tail(new_data, k) }</p>
+<p>sum(is.na(new_data)) anyNA(new_data)</p>
 
 
 </section>

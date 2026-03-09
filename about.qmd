@@ -13,18 +13,20 @@ sidebar: false
 
 1.  Firm ROKETSAN, position Candidate Engineer, year 2025
 
-2.  Firm yyy, position yyy, year yyy
 
 ## Internships
 
-1.  Firm aaa, position xx, year xxx
+1.  Firm Corendon Airlines, position Intern, year 2024
 
-2.  Firm bbb, position yyy, year yyy
+2.  Firm ROKETSAN, position ıntern, year 2025
 
 # Projects
 
+Graduation Project - Air Vehicle Design and Development Project Scheduling with Uncertain Activity Durations- TUSAŞ
+
 # Competencies
 
-R, Quarto, Git, Python
+R, Quarto, Git, Python, Excel, Minitab, Matlab, Microsoft Project
 
 # Hobbies
+Puzzle

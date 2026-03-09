@@ -349,12 +349,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assignment-1" id="toc-assignment-1" class="nav-link active" data-scroll-target="#assignment-1">Assignment 1</a>
-  <ul class="collapse">
-  <li><a href="#a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir" id="toc-a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir" class="nav-link" data-scroll-target="#a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir">(a) “Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Baykal Hafızoğlu &amp; Erdi Daşdemir”</a></li>
+  <li><a href="#a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir" id="toc-a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir" class="nav-link active" data-scroll-target="#a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir">(a) “Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Baykal Hafızoğlu &amp; Erdi Daşdemir”</a></li>
   <li><a href="#b-open-ended-question" id="toc-b-open-ended-question" class="nav-link" data-scroll-target="#b-open-ended-question">(b) Open-Ended Question</a></li>
   <li><a href="#multiple-choice-question" id="toc-multiple-choice-question" class="nav-link" data-scroll-target="#multiple-choice-question">Multiple Choice Question</a></li>
-  </ul></li>
   </ul>
 </nav>
 </nav>
@@ -385,9 +382,7 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="assignment-1" class="level1">
-<h1>Assignment 1</h1>
-<p>My first assignment has two parts.</p>
+<p>My first assignment has two parts. The first part also has two parts and the second part contains lots of tasks.</p>
 <section id="a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir" class="level3">
 <h3 class="anchored" data-anchor-id="a-veri-bilimi-ve-endüstri-mühendisliği-üzerine-sohbetler---baykal-hafızoğlu-erdi-daşdemir">(a) “Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Baykal Hafızoğlu &amp; Erdi Daşdemir”</h3>
 <p>The video discusses the relationship between data science and industrial engineering and how these fields complement each other today. Data science is a field that aims to obtain meaningful results by analyzing large amounts of data and using these results in decision-making processes. Valuable information can be extracted from data through the combination of statistics, mathematics, and computer science. As technology advances and the amount of data increases rapidly, the need for experts who can analyze data is also increasing. The video also emphasizes the strong connection between data science and industrial engineering. Industrial engineers make decisions based on data analysis in areas such as production planning, inventory control, demand forecasting, and supply chain management. Therefore, data science methods help to build more accurate models and make systems work more efficiently. Thanks to methods such as statistical analysis, machine learning, and data mining, companies can make more accurate and faster decisions by using their data more effectively. Therefore, it is emphasized that data analysis and programming skills will become an important competency for industrial engineers in the future.</p>
@@ -404,9 +399,49 @@ ul.task-list li input[type="checkbox"] {
 <p>C) Production planning</p>
 <p>D) Interpretation of historical events</p>
 <p><strong><em>Correct answer: D) Interpretation of historical events</em></strong></p>
+<p><br>
+install.packages(“dslabs”)</p>
+<p>library(dslabs)<br>
+data(“polls_us_election_2016”)<br>
+<br>
+my_first &lt;- “Tugce”<br>
+my_birth_year &lt;- 2003<br>
+</p>
+<p>k &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8<br>
+<br>
+if (k %% 2 == 0) {<br>
+head(polls_us_election_2016, k)<br>
+} else {<br>
+tail(polls_us_election_2016, k)<br>
+}<br>
+<br>
+total_na &lt;- sum(is.na(polls_us_election_2016))<br>
+total_na<br>
+<br>
+na_per_column &lt;- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)<br>
+head(na_per_column, 8)<br>
+<br>
+new_data &lt;- polls_us_election_2016<br>
+<br>
+for (col in names(new_data)) {<br>
+if (is.numeric(new_data[[col]])) {<br>
+new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k<br>
+} else if (is.character(new_data[[col]]) || is.factor(new_data[[col]])) {<br>
+new_data[[col]] &lt;- as.character(new_data[[col]])<br>
+new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, “_”, k)<br>
+}<br>
+}<br>
+<br>
+if (k %% 2 == 0) {<br>
+head(new_data, k)<br>
+} else {<br>
+tail(new_data, k)<br>
+}<br>
+<br>
+sum(is.na(new_data))<br>
+anyNA(new_data)</p>
 
 
-</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->

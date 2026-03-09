@@ -8,26 +8,26 @@ My first assignment has two parts.
 
 ## (a) "Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler - Baykal Hafızoğlu & Erdi Daşdemir"
 
-## The video discusses the relationship between data science and industrial engineering and how these fields complement each other today. Data science is a field that aims to obtain meaningful results by analyzing large amounts of data and using these results in decision-making processes. Valuable information can be extracted from data through the combination of statistics, mathematics, and computer science. As technology advances and the amount of data increases rapidly, the need for experts who can analyze data is also increasing.  The video also emphasizes the strong connection between data science and industrial engineering. Industrial engineers make decisions based on data analysis in areas such as production planning, inventory control, demand forecasting, and supply chain management. Therefore, data science methods help to build more accurate models and make systems work more efficiently. Thanks to methods such as statistical analysis, machine learning, and data mining, companies can make more accurate and faster decisions by using their data more effectively. Therefore, it is emphasized that data analysis and programming skills will become an important competency for industrial engineers in the future.
+## The video discusses the relationship between data science and industrial engineering and how these fields complement each other today. Data science is a field that aims to obtain meaningful results by analyzing large amounts of data and using these results in decision-making processes. Valuable information can be extracted from data through the combination of statistics, mathematics, and computer science. As technology advances and the amount of data increases rapidly, the need for experts who can analyze data is also increasing. The video also emphasizes the strong connection between data science and industrial engineering. Industrial engineers make decisions based on data analysis in areas such as production planning, inventory control, demand forecasting, and supply chain management. Therefore, data science methods help to build more accurate models and make systems work more efficiently. Thanks to methods such as statistical analysis, machine learning, and data mining, companies can make more accurate and faster decisions by using their data more effectively. Therefore, it is emphasized that data analysis and programming skills will become an important competency for industrial engineers in the future.
 
 ## (b)
 
-## Open-Ended Question  
+## Open-Ended Question
 
 ## Explain how data science contributes to decision-making processes in the field of industrial engineering and give examples of areas in which it can be used in businesses.
 
-## Multiple Choice Question  
+## Multiple Choice Question
 
-## Which of the following is NOT an application of data science in industrial engineering, according to the video?  
+## Which of the following is NOT an application of data science in industrial engineering, according to the video?
 
-## A) Demand forecasting 
+## A) Demand forecasting
 
-## B) Supply chain optimization 
+## B) Supply chain optimization
 
-## C) Production planning 
+## C) Production planning
 
-## D) Interpretation of historical events  
+## D) Interpretation of historical events
 
-## Correct answer: 
+## Correct answer:
 
 ## D) Interpretation of historical events

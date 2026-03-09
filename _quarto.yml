@@ -1,7 +1,6 @@
 project:
   type: website
   output-dir: docs
-
 website:
   title: "Tugce Basaran's Analytics Lab"
   navbar:
@@ -22,7 +21,7 @@ website:
             
     tools:
       - icon: github
-        href: https://emu-hacettepe-analytics.github.io/emu430-spring2026-TugceBasaran/
+        href: https://github.com/TugceBasaran
       - icon: linkedin
         href: www.linkedin.com/in/tuğçe-başaran
 

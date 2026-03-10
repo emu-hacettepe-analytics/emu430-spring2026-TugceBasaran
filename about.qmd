@@ -3,6 +3,8 @@ title: "About Me"
 sidebar: false 
 ---
 
+[Download My CV (PDF)
+
 # Education
 
 -   B.S., Industrial Engineering, Hacettepe University, Turkey, 2021 - ongoing.
@@ -31,4 +33,3 @@ R, Quarto, Git, Python, Excel, Minitab, Matlab, Microsoft Project
 # Hobbies
 Puzzle
 
-[Download My CV (PDF)] (CV temmuz.pdf)

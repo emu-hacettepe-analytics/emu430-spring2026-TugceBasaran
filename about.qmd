@@ -3,7 +3,7 @@ title: "About Me"
 sidebar: false 
 ---
 
-[Download My CV (PDF)
+\[Download My CV (PDF)\] (tugcebasaran_cv.pdf)
 
 # Education
 
@@ -14,7 +14,6 @@ sidebar: false
 ## Employements
 
 1.  Firm ROKETSAN, position Candidate Engineer, year 2025
-
 
 ## Internships
 
@@ -31,5 +30,5 @@ Graduation Project - Air Vehicle Design and Development Project Scheduling with 
 R, Quarto, Git, Python, Excel, Minitab, Matlab, Microsoft Project
 
 # Hobbies
-Puzzle
 
+Puzzle

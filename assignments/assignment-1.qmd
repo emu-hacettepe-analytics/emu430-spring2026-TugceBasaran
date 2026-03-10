@@ -26,44 +26,57 @@ D\) Interpretation of historical events
 
 ***Correct answer: D) Interpretation of historical events***
 
-\`\`\`{r}\
-library(dslabs)\
-data("polls_us_election_2016")\
-\
-my_first \<- "Tugce"\
-my_birth_year \<- 2003\
-\
-k \<- (nchar(my_first) + my_birth_year) %% 15 + 8\
-k\
-\
-if (k %% 2 == 0) {\
-head(polls_us_election_2016, k)\
-} else {\
-tail(polls_us_election_2016, k)\
-}\
-\
-total_na \<- sum(is.na(polls_us_election_2016))\
-total_na\
-\
-na_per_column \<- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)\
-head(na_per_column, 8)\
-\
-new_data \<- polls_us_election_2016\
-\
-for (col in names(new_data)) {\
-if (is.numeric(new_data\[\[col\]\])) {\
-new_data\[\[col\]\]\[is.na(new_data\[\[col\]\])\] \<- my_birth_year + k\
-} else if (is.character(new_data\[\[col\]\]) \|\| is.factor(new_data\[\[col\]\])) {\
-new_data\[\[col\]\] \<- as.character(new_data\[\[col\]\])\
-new_data\[\[col\]\]\[is.na(new_data\[\[col\]\])\] \<- paste0(my_first, "\_", k)\
-}\
-}\
-\
-if (k %% 2 == 0) {\
-head(new_data, k)\
-} else {\
-tail(new_data, k)\
-}\
-\
-sum(is.na(new_data))\
+```{r}
+# Gerekli paketi ve veri setini içe aktarma
+library(dslabs)
+data("polls_us_election_2016") 
+
+# Kendi bilgilerini tanımla (LÜTFEN AŞAĞIDAKİ BİLGİLERİ KENDİNE GÖRE DEĞİŞTİR)
+my_first <- "ADIN" 
+my_birth_year <- 2000 
+
+# k değerini hesaplama
+k <- (nchar(my_first) + my_birth_year) %% 15 + 8
+
+# k'nın durumuna göre orijinal veri setinden satırları gösterme
+if (k %% 2 == 0) {
+  head(polls_us_election_2016, k) # Çift ise ilk k satır
+} else {
+  tail(polls_us_election_2016, k) # Tek ise son k satır
+}
+
+# Veri setindeki tüm NA değerlerinin toplamı
+cat("Toplam NA sayısı (Orijinal): ", sum(is.na(polls_us_election_2016)), "\n")
+
+# Sütun başına NA sayılarını büyükten küçüğe sıralayıp ilk 8'ini gösterme
+na_per_column <- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE)
+head(na_per_column, 8)
+
+# NA değerlerini istenen kurallara göre değiştirip yeni objeye atama
+new_data <- polls_us_election_2016
+
+for (col in names(new_data)) {
+  if (is.numeric(new_data[[col]])) {
+    # Sayısal sütunlar için: Doğum yılı + k
+    new_data[[col]][is.na(new_data[[col]])] <- my_birth_year + k
+  } else if (is.character(new_data[[col]]) || is.factor(new_data[[col]])) {
+    # Karakter veya faktör sütunlar için: İsim + k
+    if(is.factor(new_data[[col]])) {
+      levels(new_data[[col]]) <- c(levels(new_data[[col]]), paste0(my_first, "", k))
+    }
+    new_data[[col]][is.na(new_data[[col]])] <- paste0(my_first, "", k)
+  }
+}
+
+# Yeni veri setinden k satır gösterme
+if (k %% 2 == 0) {
+  head(new_data, k)
+} else {
+  tail(new_data, k)
+}
+
+# Yeni veri setinde kalan toplam NA sayısını gösterme
+cat("Yeni veri setindeki toplam NA sayısı: ", sum(is.na(new_data)), "\n")
+
+# Yeni veri setinde hiç NA kalıp kalmadığını kontrol etme (FALSE dönmelidir)
 anyNA(new_data)

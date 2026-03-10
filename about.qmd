@@ -3,7 +3,7 @@ title: "About Me"
 sidebar: false 
 ---
 
-[Download My CV](cv.pdf)
+[Download My tugcebasaran_cv.pdf.pdf)
 
 # Education
 

@@ -30,3 +30,5 @@ R, Quarto, Git, Python, Excel, Minitab, Matlab, Microsoft Project
 
 # Hobbies
 Puzzle
+
+[Download My CV (PDF)] (CV temmuz.pdf)

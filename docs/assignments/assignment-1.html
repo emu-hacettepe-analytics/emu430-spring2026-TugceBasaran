@@ -399,24 +399,6 @@ ul.task-list li input[type="checkbox"] {
 <p>C) Production planning</p>
 <p>D) Interpretation of historical events</p>
 <p><strong><em>Correct answer: D) Interpretation of historical events</em></strong></p>
-<p>```aecfo library(dslabs) data(“polls_us_election_2016”)<br>
-my_first &lt;- “Tugce” my_birth_year &lt;- 2002 k &lt;- (nchar(my_first) + my_birth_year) %% 15 + 8</p>
-<p>if (k %% 2 == 0) {<br>
-head(polls_us_election_2016, k) } else {<br>
-tail(polls_us_election_2016, k) }</p>
-<p>total_na &lt;- sum(is.na(polls_us_election_2016)) total_na</p>
-<p>na_per_column &lt;- sort(colSums(is.na(polls_us_election_2016)), decreasing = TRUE) head(na_per_column, 8)</p>
-<p>new_data &lt;- polls_us_election_2016</p>
-<p>for (col in names(new_data)) {<br>
-if (is.numeric(new_data[[col]])) { new_data[[col]][is.na(new_data[[col]])] &lt;- my_birth_year + k<br>
-} else if (is.character(new_data[[col]]) || is.factor(new_data[[col]])) {<br>
-new_data[[col]] &lt;- as.character(new_data[[col]])<br>
-new_data[[col]][is.na(new_data[[col]])] &lt;- paste0(my_first, “_“, k)<br>
-} }<br>
-if (k %% 2 == 0) {<br>
-head(new_data, k) } else {<br>
-tail(new_data, k) }</p>
-<p>sum(is.na(new_data)) anyNA(new_data)</p>
 
 
 </section>
